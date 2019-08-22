@@ -139,7 +139,7 @@ QdtSelectionToolbar.propTypes = {
 };
 QdtSelectionToolbar.defaultProps = {
   title: 'SELECTIONS',
-  btnText: 'Clear All',
+  btnText: 'Clear Selections',
 };
 
 const QdtSelectionToolbarObject = withSelectionObject(QdtSelectionToolbar);
