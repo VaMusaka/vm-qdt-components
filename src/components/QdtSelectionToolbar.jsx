@@ -60,7 +60,7 @@ of
     );
   }
 }
-
+/*
 const QdtSelectionToolbar = ({
   qLayout, clearSelections, title, btnText,
 }) => {
@@ -126,6 +126,11 @@ const QdtSelectionToolbar = ({
     </div>
   );
 };
+*/
+
+const QdtSelectionToolbar = () => {
+  return ('HELLO WORLD');
+}
 QdtSelectionToolbar.propTypes = {
   qLayout: PropTypes.object.isRequired,
   clearSelections: PropTypes.func.isRequired,
