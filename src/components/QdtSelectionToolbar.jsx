@@ -39,16 +39,20 @@ of
           {value.total}
           <span className="lui-icon lui-icon--triangle-bottom" />
         </div>
-        <ul>
+        <ul className="lui-list">
           {value.selected.map(value2 => (
-            <li key={value2}>
+            <li className="lui-list__item" key={value2}>
+              <span className="lui-list__text">
               {value2}
-              <span
-                className="lui-icon lui-icon--remove pull-right"
-                onClick={() => clearSelections(value.field, value2)}
-                role="button"
-                tabIndex={0}
-              />
+              </span>
+              <span className="lui-list__aside">
+                <span
+                  className="lui-icon lui-icon--remove pull-right"
+                  onClick={() => clearSelections(value.field, value2)}
+                  role="button"
+                  tabIndex={0}
+                />
+              </span>
             </li>
           ))}
         </ul>
