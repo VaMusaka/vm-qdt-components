@@ -15,10 +15,7 @@ const Preloader = (props) => {
   }
   return (
     <div className="qtd-preloader" style={{ width, height, 'padding-top': paddingTop }}>
-      {/*<div className="qtd-preloader-ball1" />*/}
-      {/*<div className="qtd-preloader-ball2" />*/}
-
-      SOME THING IS LOADING
+          SOME THING IS LOADING ...
     </div>
   );
 };
