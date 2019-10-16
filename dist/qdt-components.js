@@ -19385,73 +19385,49 @@ function withSelectionObject_withListObject(Component) {
 }
 // CONCATENATED MODULE: ./src/components/QdtSelectionToolbar.jsx
 
+ // import autobind from 'autobind-decorator';
+// import { LuiDropdown } from 'qdt-lui';
 
 
 
 
-
-
-var QdtSelectionToolbar_class, QdtSelectionToolbar_class2, QdtSelectionToolbar_temp;
-
-
-
- // import { LuiDropdown } from 'qdt-lui';
-
-
-
-
-var QdtSelectionToolbar_QdtSelectionToolbarDropdown = (QdtSelectionToolbar_class = (QdtSelectionToolbar_temp = QdtSelectionToolbar_class2 =
-/*#__PURE__*/
-function (_React$Component) {
-  inherits_default()(QdtSelectionToolbarDropdown, _React$Component);
-
-  function QdtSelectionToolbarDropdown() {
-    var _getPrototypeOf2;
-
-    var _this;
-
-    classCallCheck_default()(this, QdtSelectionToolbarDropdown);
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = possibleConstructorReturn_default()(this, (_getPrototypeOf2 = getPrototypeOf_default()(QdtSelectionToolbarDropdown)).call.apply(_getPrototypeOf2, [this].concat(args)));
-    _this.state = {
-      dropdownOpen: false
-    };
-    return _this;
+/*
+class QdtSelectionToolbarDropdown extends React.Component {
+  static propTypes = {
+    clearSelections: PropTypes.func.isRequired,
+    value: PropTypes.object.isRequired,
   }
 
-  createClass_default()(QdtSelectionToolbarDropdown, [{
-    key: "toggle",
-    value: function toggle() {
-      var dropdownOpen = this.state.dropdownOpen;
-      this.setState({
-        dropdownOpen: !dropdownOpen
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          clearSelections = _this$props.clearSelections,
-          value = _this$props.value;
-      var dropdownOpen = this.state.dropdownOpen;
-      console.log(clearSelections, dropdownOpen);
-      return react_default.a.createElement("ul", {
-        className: "lui-list"
-      }, react_default.a.createElement("li", {
-        className: "lui-list__item"
-      }, value.field, ":", value.selected.length, ' ', "of", ' ', value.total));
-    }
-  }]);
+  state = {
+    dropdownOpen: false,
+  }
 
-  return QdtSelectionToolbarDropdown;
-}(react_default.a.Component), QdtSelectionToolbar_class2.propTypes = {
-  clearSelections: prop_types_default.a.func.isRequired,
-  value: prop_types_default.a.object.isRequired
-}, QdtSelectionToolbar_temp), (applyDecoratedDescriptor_default()(QdtSelectionToolbar_class.prototype, "toggle", [autobind], Object.getOwnPropertyDescriptor(QdtSelectionToolbar_class.prototype, "toggle"), QdtSelectionToolbar_class.prototype)), QdtSelectionToolbar_class);
+  @autobind
+  toggle() {
+    const { dropdownOpen } = this.state;
+    this.setState({ dropdownOpen: !dropdownOpen });
+  }
+
+  render() {
+    const { clearSelections, value } = this.props;
+    const { dropdownOpen } = this.state;
+    console.log(clearSelections, dropdownOpen);
+    return (
+      <ul className="lui-list">
+        <li className="lui-list__item">
+          {value.field}
+          :
+          {value.selected.length}
+          {' '}
+          of
+          {' '}
+          {value.total}
+        </li>
+      </ul>
+    );
+  }
+}
+*/
 
 var QdtSelectionToolbar_QdtSelectionToolbar = function QdtSelectionToolbar(_ref) {
   var qLayout = _ref.qLayout,
@@ -19503,7 +19479,7 @@ var QdtSelectionToolbar_QdtSelectionToolbar = function QdtSelectionToolbar(_ref)
         key: value.field
       }, react_default.a.createElement("span", {
         className: "lui-list__text"
-      }, value.field, ":", ' ', value.selected[0]), react_default.a.createElement("span", {
+      }, value.field, ' - ', ":", ' - ', value.selected[0]), react_default.a.createElement("span", {
         className: "lui-list__aside"
       }, react_default.a.createElement("span", {
         className: "lui-icon lui-icon--close",
@@ -19518,10 +19494,9 @@ var QdtSelectionToolbar_QdtSelectionToolbar = function QdtSelectionToolbar(_ref)
     return react_default.a.createElement("li", {
       className: "lui-list__item",
       key: value.field
-    }, react_default.a.createElement(QdtSelectionToolbar_QdtSelectionToolbarDropdown, {
-      value: value,
-      clearSelections: clearSelections
-    }));
+    }, react_default.a.createElement("span", {
+      className: "lui-list__text"
+    }, value.field, ":", value.selected.length, ' - ', "of", ' - ', value.total));
   }), selections.length >= 1 && selections.length <= 6 && react_default.a.createElement("li", {
     className: "lui-list__item"
   }, react_default.a.createElement("button", {

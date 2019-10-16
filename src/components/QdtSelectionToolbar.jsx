@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import autobind from 'autobind-decorator';
+// import autobind from 'autobind-decorator';
 // import { LuiDropdown } from 'qdt-lui';
 import 'leonardo-ui/dist/leonardo-ui.css';
 import withSelectionObject from './withSelectionObject';
 import '../styles/index.scss';
 
+/*
 class QdtSelectionToolbarDropdown extends React.Component {
   static propTypes = {
     clearSelections: PropTypes.func.isRequired,
@@ -41,6 +42,7 @@ class QdtSelectionToolbarDropdown extends React.Component {
     );
   }
 }
+*/
 
 const QdtSelectionToolbar = ({
   qLayout, clearSelections, title, btnText,
@@ -85,8 +87,9 @@ const QdtSelectionToolbar = ({
                   <li className="lui-list__item" key={value.field}>
                     <span className="lui-list__text">
                       {value.field}
+                      { ' - ' }
                       :
-                      { ' ' }
+                      { ' - ' }
                       {value.selected[0]}
                     </span>
                     <span className="lui-list__aside">
@@ -97,13 +100,15 @@ const QdtSelectionToolbar = ({
               }
               return (
                 <li className="lui-list__item" key={value.field}>
-                  {value.field}
-                  :
-                  {value.selected.length}
-                  {' '}
-                  of
-                  {' '}
-                  {value.total}
+                  <span className="lui-list__text">
+                    {value.field}
+                    :
+                    {value.selected.length}
+                    {' - '}
+                    of
+                    {' - '}
+                    {value.total}
+                  </span>
                 </li>
               );
             })
