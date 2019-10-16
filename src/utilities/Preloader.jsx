@@ -7,7 +7,8 @@ const Preloader = (props) => {
   const {
     width, height,
   } = props;
-  return (<Loader type="Grid" color="#cccccc" height={width} width={height} />);
+  const margin = 'auto';
+  return (<div style={{ height, width, margin }}><Loader style={{ margin }} type="Grid" color="#cccccc" height={80} width={80} /></div>);
 };
 Preloader.propTypes = {
   width: PropTypes.string,

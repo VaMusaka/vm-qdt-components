@@ -16233,12 +16233,22 @@ var react_spinner_loader = __webpack_require__(61);
 var Preloader_Preloader = function Preloader(props) {
   var width = props.width,
       height = props.height;
-  return react_default.a.createElement(react_loader_spinner_default.a, {
+  var margin = 'auto';
+  return react_default.a.createElement("div", {
+    style: {
+      height: height,
+      width: width,
+      margin: margin
+    }
+  }, react_default.a.createElement(react_loader_spinner_default.a, {
+    style: {
+      margin: margin
+    },
     type: "Grid",
     color: "#cccccc",
-    height: width,
-    width: height
-  });
+    height: 80,
+    width: 80
+  }));
 };
 
 Preloader_Preloader.propTypes = {
