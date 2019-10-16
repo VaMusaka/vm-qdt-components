@@ -60,7 +60,7 @@ of
     );
   }
 }
-/*
+
 const QdtSelectionToolbar = ({
   qLayout, clearSelections, title, btnText,
 }) => {
@@ -91,9 +91,11 @@ const QdtSelectionToolbar = ({
           <span className="lui-list__text">{title}</span>
         </li>
         {selections.length === 0
-        && <li className="lui-list__item no-selections">
+        && (
+        <li className="lui-list__item no-selections">
           <span className="lui-list__text">No Selections</span>
-          </li>
+        </li>
+        )
         }
         {selections.length >= 1 && selections.length <= 6
             && selections.map((value) => {
@@ -126,9 +128,7 @@ const QdtSelectionToolbar = ({
     </div>
   );
 };
-*/
 
-const QdtSelectionToolbar = () => ('HELLO WORLD');
 QdtSelectionToolbar.propTypes = {
   qLayout: PropTypes.object.isRequired,
   clearSelections: PropTypes.func.isRequired,

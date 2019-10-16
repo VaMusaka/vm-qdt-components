@@ -12,13 +12,13 @@ const Preloader = (props) => {
 Preloader.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
-  paddingTop: PropTypes.string,
-  type: PropTypes.string,
+  // paddingTop: PropTypes.string,
+  // type: PropTypes.string,
 };
 Preloader.defaultProps = {
   width: '100%',
   height: '100%',
-  paddingTop: 0,
-  type: 'balls',
+  // paddingTop: 0,
+  // type: 'balls',
 };
 export default Preloader;

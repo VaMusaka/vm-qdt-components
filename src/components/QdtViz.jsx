@@ -137,9 +137,7 @@ export default class QdtViz extends React.Component {
     if (error) {
       return <div>{error.message}</div>;
     } if (loading) {
-      return <div>Loading...</div>;
-      const paddingTop = (parseInt(height, 0)) ? (height / 2) - 10 : 0;
-      return <Preloader width={width} height={height} paddingTop={paddingTop} />;
+      return <Preloader width={width} height={height} />;
     }
     const btnStyle = { display: 'inline-block', paddingRight: 20, paddingTop: 15 };
     return (
