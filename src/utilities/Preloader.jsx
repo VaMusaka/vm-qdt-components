@@ -17,8 +17,8 @@ Preloader.propTypes = {
   // type: PropTypes.string,
 };
 Preloader.defaultProps = {
-  width: '100%',
-  height: '100%',
+  width: '50%',
+  height: '50%',
   // paddingTop: 0,
   // type: 'balls',
 };

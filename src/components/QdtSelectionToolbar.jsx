@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import autobind from 'autobind-decorator';
 import { LuiDropdown } from 'qdt-lui';
+import 'leonardo-ui/dist/leonardo-ui.css';
 import withSelectionObject from './withSelectionObject';
 import '../styles/index.scss';
 
@@ -109,7 +110,7 @@ const QdtSelectionToolbar = ({
                       {value.selected[0]}
                     </span>
                     <span className="lui-list__aside">
-                      <span className="lui-icon lui-icon--remove" onClick={() => clearSelections(value.field)} role="button" tabIndex={0} />
+                      <span className="lui-icon lui-icon--close" onClick={() => clearSelections(value.field)} role="button" tabIndex={0} />
                     </span>
                   </li>
                 );
