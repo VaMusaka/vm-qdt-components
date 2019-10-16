@@ -16268,6 +16268,7 @@ var Preloader_Preloader = function Preloader(props) {
   var width = props.width,
       height = props.height;
   var margin = 'auto';
+  var padding = (height - 80) / 2;
   return react_default.a.createElement("div", {
     style: {
       height: height,
@@ -16276,7 +16277,8 @@ var Preloader_Preloader = function Preloader(props) {
     }
   }, react_default.a.createElement(react_loader_spinner_default.a, {
     style: {
-      margin: margin
+      margin: margin,
+      paddingTop: padding
     },
     type: "Grid",
     color: "#cccccc",
