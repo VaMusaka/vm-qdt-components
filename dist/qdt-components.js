@@ -16273,12 +16273,12 @@ var Preloader_Preloader = function Preloader(props) {
     style: {
       height: height,
       width: width,
-      margin: margin
+      margin: margin,
+      paddingTop: "".concat(padding, "px")
     }
   }, react_default.a.createElement(react_loader_spinner_default.a, {
     style: {
-      margin: margin,
-      paddingTop: "".concat(padding, "px")
+      margin: margin
     },
     type: "Grid",
     color: "#cccccc",
@@ -55882,37 +55882,19 @@ QdtCurrentSelections_QdtViz.defaultProps = {
 
 
 
-
 var QdtBookmark_QdtBookmark = function QdtBookmark(_ref) {
-  var qLayout = _ref.qLayout;
+  var qAppPromise = _ref.qAppPromise,
+      qDocPromise = _ref.qDocPromise;
   // const bookmarkList = qLayout.qBookmarkList;
-  console.log(qLayout);
+  console.log(qAppPromise, qDocPromise);
   return react_default.a.createElement("div", null, react_default.a.createElement("h1", null, "HELLO FROM BOOKMARKS"));
 };
 
 QdtBookmark_QdtBookmark.propTypes = {
-  qLayout: prop_types_default.a.object.isRequired
+  qAppPromise: prop_types_default.a.object.isRequired,
+  qDocPromise: prop_types_default.a.object.isRequired
 };
-var QdtBookmarkObject = withSelectionObject_withListObject(QdtBookmark_QdtBookmark);
-QdtBookmarkObject.propTypes = {
-  qDocPromise: prop_types_default.a.object.isRequired,
-  cols: prop_types_default.a.array,
-  options: prop_types_default.a.object,
-  qPage: prop_types_default.a.object
-};
-QdtBookmarkObject.defaultProps = {
-  cols: [],
-  options: {
-    qType: 'SelectionObject'
-  },
-  qPage: {
-    qTop: 0,
-    qLeft: 0,
-    qWidth: 1,
-    qHeight: 1
-  }
-};
-/* harmony default export */ var components_QdtBookmark = (QdtBookmarkObject);
+/* harmony default export */ var components_QdtBookmark = (QdtBookmark_QdtBookmark);
 // CONCATENATED MODULE: ./src/QdtComponents.jsx
 
 
