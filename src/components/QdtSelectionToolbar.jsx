@@ -97,7 +97,13 @@ const QdtSelectionToolbar = ({
               }
               return (
                 <li className="lui-list__item" key={value.field}>
-                  <QdtSelectionToolbarDropdown value={value} clearSelections={clearSelections} />
+                  {value.field}
+                  :
+                  {value.selected.length}
+                  {' '}
+                  of
+                  {' '}
+                  {value.total}
                 </li>
               );
             })
