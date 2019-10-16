@@ -1,5 +1,5 @@
 {
-  "name": "qdt-components",
+  "name": "vm-qdt-components",
   "version": "0.1.2",
   "description": "Qlik Demo Team Components - (Catalyst Extended)",
   "main": "dist/qdt-components.js",
