@@ -1,7 +1,7 @@
 /// <reference types="@types/qlik-engineapi" />
 /// <reference types="@types/qlik-visualizationextensions" />
 
-declare module "vm-qdt-components" {
+declare module "qdt-components" {
   /**
    * Qlik-powered components built by the Qlik Demo Team. For use with simple html, Angular6, React 16 and Vue 2
    */
