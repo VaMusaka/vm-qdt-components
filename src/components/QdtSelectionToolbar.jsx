@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import autobind from 'autobind-decorator';
-import { LuiDropdown } from 'qdt-lui';
+// import { LuiDropdown } from 'qdt-lui';
 import 'leonardo-ui/dist/leonardo-ui.css';
 import withSelectionObject from './withSelectionObject';
 import '../styles/index.scss';
@@ -25,6 +25,7 @@ class QdtSelectionToolbarDropdown extends React.Component {
   render() {
     const { clearSelections, value } = this.props;
     const { dropdownOpen } = this.state;
+    console.log(clearSelections, dropdownOpen);
     return (
       <ul className="lui-list">
         <li className="lui-list__item">

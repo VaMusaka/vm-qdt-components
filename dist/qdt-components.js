@@ -19395,7 +19395,7 @@ var QdtSelectionToolbar_class, QdtSelectionToolbar_class2, QdtSelectionToolbar_t
 
 
 
-
+ // import { LuiDropdown } from 'qdt-lui';
 
 
 
@@ -19438,35 +19438,12 @@ function (_React$Component) {
           clearSelections = _this$props.clearSelections,
           value = _this$props.value;
       var dropdownOpen = this.state.dropdownOpen;
-      return react_default.a.createElement(qdt_lui["LuiDropdown"], {
-        isOpen: dropdownOpen,
-        toggle: this.toggle,
-        select: false
-      }, react_default.a.createElement("ul", {
+      console.log(clearSelections, dropdownOpen);
+      return react_default.a.createElement("ul", {
         className: "lui-list"
       }, react_default.a.createElement("li", {
-        className: "lui-list__text"
-      }, value.field, ":", value.selected.length, ' ', "of", value.total, react_default.a.createElement("span", {
-        className: "lui-icon lui-icon--more"
-      }))), react_default.a.createElement("ul", {
-        className: "lui-list"
-      }, value.selected.map(function (value2) {
-        return react_default.a.createElement("li", {
-          className: "lui-list__item",
-          key: value2
-        }, react_default.a.createElement("span", {
-          className: "lui-list__text"
-        }, value2), react_default.a.createElement("span", {
-          className: "lui-list__aside"
-        }, react_default.a.createElement("span", {
-          className: "lui-icon lui-icon--remove pull-right",
-          onClick: function onClick() {
-            return clearSelections(value.field, value2);
-          },
-          role: "button",
-          tabIndex: 0
-        })));
-      })));
+        className: "lui-list__item"
+      }, value.field, ":", value.selected.length, ' ', "of", ' ', value.total));
     }
   }]);
 
