@@ -26,40 +26,17 @@ class QdtSelectionToolbarDropdown extends React.Component {
     const { clearSelections, value } = this.props;
     const { dropdownOpen } = this.state;
     return (
-      <LuiDropdown
-        isOpen={dropdownOpen}
-        toggle={this.toggle}
-        select={false}
-      >
-        <ul className="lui-list">
-          <li className="lui-list__text">
-            {value.field}
-:
-            {value.selected.length}
-            {' '}
-of
-            {value.total}
-            <span className="lui-icon lui-icon--more" />
-          </li>
-        </ul>
-        <ul className="lui-list">
-          {value.selected.map(value2 => (
-            <li className="lui-list__item" key={value2}>
-              <span className="lui-list__text">
-                {value2}
-              </span>
-              <span className="lui-list__aside">
-                <span
-                  className="lui-icon lui-icon--remove pull-right"
-                  onClick={() => clearSelections(value.field, value2)}
-                  role="button"
-                  tabIndex={0}
-                />
-              </span>
-            </li>
-          ))}
-        </ul>
-      </LuiDropdown>
+      <ul className="lui-list">
+        <li className="lui-list__item">
+          {value.field}
+          :
+          {value.selected.length}
+          {' '}
+          of
+          {' '}
+          {value.total}
+        </li>
+      </ul>
     );
   }
 }
