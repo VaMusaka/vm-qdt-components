@@ -86,7 +86,7 @@ const QdtSelectionToolbar = ({
   }
 
   return (
-    <div className="qdt-selection-toolbar">
+    <div className="">
       <ul className="lui-list">
         <li className="lui-list__header">
           <span className="lui-list__text">{title}</span>
@@ -122,7 +122,7 @@ const QdtSelectionToolbar = ({
               );
             })
         }
-        {selections.length >= 1 && selections.length <= 6
+        {selections.length >= 1
         && <li className="lui-list__item"><button type="button" className="lui-button--block lui-button lui-button--warning clear-all" onClick={() => clearSelections()} tabIndex={0}>{btnText}</button></li>
         }
       </ul>

@@ -19504,7 +19504,7 @@ var QdtSelectionToolbar_QdtSelectionToolbar = function QdtSelectionToolbar(_ref)
   }
 
   return react_default.a.createElement("div", {
-    className: "qdt-selection-toolbar"
+    className: ""
   }, react_default.a.createElement("ul", {
     className: "lui-list"
   }, react_default.a.createElement("li", {
@@ -19541,7 +19541,7 @@ var QdtSelectionToolbar_QdtSelectionToolbar = function QdtSelectionToolbar(_ref)
       value: value,
       clearSelections: clearSelections
     }));
-  }), selections.length >= 1 && selections.length <= 6 && react_default.a.createElement("li", {
+  }), selections.length >= 1 && react_default.a.createElement("li", {
     className: "lui-list__item"
   }, react_default.a.createElement("button", {
     type: "button",
