@@ -31,15 +31,17 @@ class QdtSelectionToolbarDropdown extends React.Component {
         toggle={this.toggle}
         select={false}
       >
-        <div>
-          {value.field}
+        <ul className="lui-list">
+          <li className="lui-list__text">
+            {value.field}
 :
-          {value.selected.length}
-          {' '}
+            {value.selected.length}
+            {' '}
 of
-          {value.total}
-          <span className="lui-icon lui-icon--triangle-bottom" />
-        </div>
+            {value.total}
+            <span className="lui-icon lui-icon--more" />
+          </li>
+        </ul>
         <ul className="lui-list">
           {value.selected.map(value2 => (
             <li className="lui-list__item" key={value2}>
@@ -105,8 +107,8 @@ const QdtSelectionToolbar = ({
                   <li className="lui-list__item" key={value.field}>
                     <span className="lui-list__text">
                       {value.field}
-  :
-                      {' '}
+                      :
+                      { ' ' }
                       {value.selected[0]}
                     </span>
                     <span className="lui-list__aside">
@@ -122,7 +124,7 @@ const QdtSelectionToolbar = ({
               );
             })
         }
-        {selections.length >= 1
+        {selections.length >= 1 && selections.length <= 6
         && <li className="lui-list__item"><button type="button" className="lui-button--block lui-button lui-button--warning clear-all" onClick={() => clearSelections()} tabIndex={0}>{btnText}</button></li>
         }
       </ul>

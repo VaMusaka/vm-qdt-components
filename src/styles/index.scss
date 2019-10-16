@@ -28,7 +28,7 @@
   color: $gray-900 !important;
   background-color: #dddddd !important;
 }
-.X { // Excluded 
+.X { // Excluded
   color: $gray-100 !important;
   background-color: #A9A9A9 !important;
 }
@@ -38,9 +38,9 @@
 }
 
 .lui-list .lui-list__item { cursor: pointer; }
-.lui-list .lui-list__item.S, 
-.lui-list .lui-list__item.A, 
-.lui-list .lui-list__item.X, 
+.lui-list .lui-list__item.S,
+.lui-list .lui-list__item.A,
+.lui-list .lui-list__item.X,
 .lui-list .lui-list__item.XS {
   border-bottom: 1px solid #fff;
 }
@@ -60,8 +60,8 @@ th.active:after {
   top: calc(50% - 0.125rem);
   margin-left: 0.5rem;
   content:"";
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: 0.5rem solid transparent;
   border-right: 0.5rem solid transparent;
   border-top: 0.5rem solid #666;
@@ -71,7 +71,7 @@ th.active:after {
 // .lui-tab { display: inline-block; }
 
 /****************
- * QdtButton 
+ * QdtButton
 *****************/
 .qtd-button {
     display: inline-block;
@@ -79,7 +79,7 @@ th.active:after {
 }
 
 /****************
- * QdtTable 
+ * QdtTable
 *****************/
 // We need to offset for the scoll bar width in the QdtBody
 .qtd-table-header {
@@ -88,8 +88,8 @@ th.active:after {
     width: -moz-calc(100% - 18px);
     width: -webkit-calc(100% - 18px);
 }
-.qtd-table-body { 
-    width: 100%; 
+.qtd-table-body {
+    width: 100%;
     tr:nth-child(even) { background: $gray-200 }
 }
 
@@ -104,11 +104,13 @@ th.active:after {
             display: inline-block;
             padding-right: 5px;
             .dropdown-item {
+                width : 100% !important;
                 font-size: 13px;
                 padding-top: 5px;
                 padding-bottom: 5px;
                 padding-left: 10px;
                 padding-right: 25px;
+                margin : auto
             }
             lui-button {
                 border: 1px solid $gray-400;
@@ -116,7 +118,7 @@ th.active:after {
                 cursor: pointer;
                 position: relative;
                 display: inline-block;
-            }        
+            }
             .btn-secondary {
                 color: $gray-900 !important;
                 background-color: #FFFFFF !important;
@@ -173,7 +175,7 @@ th.active:after {
     }
     .qdt-chart-svg {
         position: relative;
-        rect { 
+        rect {
             // fill: #49637A;
             &:hover {
                 fill: #77b62a!important;
@@ -185,14 +187,14 @@ th.active:after {
             cursor: pointer;
          }
     }
-    &::-webkit-scrollbar { 
-        width: 10px; 
-        height: 10px; 
-    }     
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
     &::-webkit-scrollbar-track {
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
         border-radius: 5px;
-    }     
+    }
     &::-webkit-scrollbar-thumb {
       background-color: darkgrey;
       outline: 1px solid slategrey;
@@ -208,7 +210,7 @@ th.active:after {
     padding: 15px;
     display: none;
     z-index: 9999999;
-    &:after, 
+    &:after,
     &:before {
         top: 100%;
         left: 50%;
@@ -218,7 +220,7 @@ th.active:after {
         width: 0;
         position: absolute;
         pointer-events: none;
-    }    
+    }
     &:after {
         border-color: rgba(0, 0, 0, 0);
         border-top-color: #000000;
@@ -236,10 +238,10 @@ th.active:after {
 /**********************
  * Preloader
 **********************/
-.qtd-preloader-bg { 
-    background-color: black; 
+.qtd-preloader-bg {
+    background-color: black;
 }
-.qtd-preloader {    
+.qtd-preloader {
     .qtd-preloader-ball1 {
         background-color: rgba(0,0,0,0);
         border: 5px solid rgba(0,183,229,0.9);
@@ -276,39 +278,39 @@ th.active:after {
         0% {
             -moz-transform: rotate(0deg);
         }
-    
+
         100% {
             -moz-transform: rotate(360deg);
         };
-    }    
+    }
     @-moz-keyframes spinoff {
         0% {
             -moz-transform: rotate(0deg);
         }
-    
+
         100% {
             -moz-transform: rotate(-360deg);
         };
-    }    
+    }
     @-webkit-keyframes spin {
         0% {
             -webkit-transform: rotate(0deg);
         }
-    
+
         100% {
             -webkit-transform: rotate(360deg);
         };
-    }    
+    }
     @-webkit-keyframes spinoff {
         0% {
             -webkit-transform: rotate(0deg);
         }
-    
+
         100% {
             -webkit-transform: rotate(-360deg);
         };
     }
-    
+
     @keyframes dots {
         0%, 20% {
         color: rgba(0,0,0,0);
@@ -348,10 +350,10 @@ th.active:after {
 /**********************
  * PICASSO
 **********************/
-.pic-tooltip-content { 
+.pic-tooltip-content {
     padding: 8px 15px !important;
-    .qdt-tooltip-header { 
-        .qdt-tooltip-header-box { 
+    .qdt-tooltip-header {
+        .qdt-tooltip-header-box {
             position: relative;
             display: inline-block;
             width: 10px;
@@ -359,21 +361,21 @@ th.active:after {
             left: -14px;
             bottom: -2px;
         }
-        .qdt-tooltip-header-title { 
+        .qdt-tooltip-header-title {
             display: inline-block;
             position: relative;
             left: -10px;
         }
-        .qdt-tooltip-header-measure { 
+        .qdt-tooltip-header-measure {
             display: inline-block;
             text-align: right;
         }
     }
     .text-right { text-align: right; }
-    .qdt-tooltip-row { 
-        display: block; 
+    .qdt-tooltip-row {
+        display: block;
         .qdt-tooltip-col-label,
-        .qdt-tooltip-col-value { 
+        .qdt-tooltip-col-value {
             display: inline-block;
             width: 50%;
             padding-left: 5px;
