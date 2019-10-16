@@ -16278,7 +16278,7 @@ var Preloader_Preloader = function Preloader(props) {
   }, react_default.a.createElement(react_loader_spinner_default.a, {
     style: {
       margin: margin,
-      paddingTop: padding
+      paddingTop: "".concat(padding, "px")
     },
     type: "Grid",
     color: "#cccccc",
