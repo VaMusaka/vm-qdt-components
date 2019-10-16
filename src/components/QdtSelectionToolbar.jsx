@@ -43,7 +43,7 @@ of
           {value.selected.map(value2 => (
             <li className="lui-list__item" key={value2}>
               <span className="lui-list__text">
-              {value2}
+                {value2}
               </span>
               <span className="lui-list__aside">
                 <span
@@ -128,9 +128,7 @@ const QdtSelectionToolbar = ({
 };
 */
 
-const QdtSelectionToolbar = () => {
-  return ('HELLO WORLD');
-}
+const QdtSelectionToolbar = () => ('HELLO WORLD');
 QdtSelectionToolbar.propTypes = {
   qLayout: PropTypes.object.isRequired,
   clearSelections: PropTypes.func.isRequired,

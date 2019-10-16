@@ -55,7 +55,7 @@
     "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.1",
     "css-loader": "3.0.0",
-    "eslint": "6.0.1",
+    "eslint": "^6.0.1",
     "eslint-config-airbnb": "17.1.1",
     "eslint-loader": "2.2.1",
     "eslint-plugin-import": "2.18.0",
@@ -73,6 +73,6 @@
   },
   "scripts": {
     "start": "webpack --watch",
-    "lint": "eslint . --ignore-path .gitignore --cache"
+    "lint": "eslint . --fix --ignore-path .gitignore --cache"
   }
 }

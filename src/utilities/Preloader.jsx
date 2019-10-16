@@ -5,12 +5,10 @@ import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 const Preloader = (props) => {
   const {
-    width, height, paddingTop, type,
+    width, height,
   } = props;
-
-  return (<Loader type="Grid" color="#somecolor" height={80} width={80} />);
+  return (<Loader type="Grid" color="#cccccc" height={width} width={height} />);
 };
-
 Preloader.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
