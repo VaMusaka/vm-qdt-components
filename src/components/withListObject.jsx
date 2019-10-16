@@ -11,8 +11,8 @@
  *
 */
 
-import React from 'react';
-import autobind from 'autobind-decorator';
+import React     from 'react';
+import autobind  from 'autobind-decorator';
 import PropTypes from 'prop-types';
 import Preloader from '../utilities/Preloader';
 

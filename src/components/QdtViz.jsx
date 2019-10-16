@@ -1,4 +1,4 @@
-import React from 'react';
+import React     from 'react';
 import PropTypes from 'prop-types';
 import Preloader from '../utilities/Preloader';
 import QdtButton from './QdtButton';

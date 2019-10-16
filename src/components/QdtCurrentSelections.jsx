@@ -1,6 +1,6 @@
-import React from 'react';
+import React     from 'react';
 import PropTypes from 'prop-types';
-import utility from '../utilities';
+import utility   from '../utilities';
 import Preloader from '../utilities/Preloader';
 
 export default class QdtViz extends React.Component {
