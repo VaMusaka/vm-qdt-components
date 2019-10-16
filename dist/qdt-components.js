@@ -55885,8 +55885,8 @@ QdtCurrentSelections_QdtViz.defaultProps = {
 
 var QdtBookmark_QdtBookmark = function QdtBookmark(_ref) {
   var qLayout = _ref.qLayout;
-  var bookmarkList = qLayout.qBookmarkList.qItems;
-  console.log(bookmarkList);
+  // const bookmarkList = qLayout.qBookmarkList;
+  console.log(qLayout);
   return react_default.a.createElement("div", null, react_default.a.createElement("h1", null, "HELLO FROM BOOKMARKS"));
 };
 

@@ -5,8 +5,8 @@ import withSelectionObject from './withSelectionObject';
 const QdtBookmark = ({
   qLayout,
 }) => {
-  const bookmarkList = qLayout.qBookmarkList.qItems;
-  console.log(bookmarkList);
+  // const bookmarkList = qLayout.qBookmarkList;
+  console.log(qLayout);
   return (<div><h1>HELLO FROM BOOKMARKS</h1></div>);
 };
 
