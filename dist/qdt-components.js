@@ -55878,6 +55878,41 @@ QdtCurrentSelections_QdtViz.defaultProps = {
   height: '100%'
 };
 
+// CONCATENATED MODULE: ./src/components/QdtBookmark.jsx
+
+
+
+
+var QdtBookmark_QdtBookmark = function QdtBookmark(_ref) {
+  var qLayout = _ref.qLayout;
+  var bookmarkList = qLayout.qBookmarkList.qItems;
+  console.log(bookmarkList);
+  return react_default.a.createElement("div", null, react_default.a.createElement("h1", null, "HELLO FROM BOOKMARKS"));
+};
+
+QdtBookmark_QdtBookmark.propTypes = {
+  qLayout: prop_types_default.a.object.isRequired
+};
+var QdtBookmarkObject = withSelectionObject_withListObject(QdtBookmark_QdtBookmark);
+QdtBookmarkObject.propTypes = {
+  qDocPromise: prop_types_default.a.object.isRequired,
+  cols: prop_types_default.a.array,
+  options: prop_types_default.a.object,
+  qPage: prop_types_default.a.object
+};
+QdtBookmarkObject.defaultProps = {
+  cols: [],
+  options: {
+    qType: 'SelectionObject'
+  },
+  qPage: {
+    qTop: 0,
+    qLeft: 0,
+    qWidth: 1,
+    qHeight: 1
+  }
+};
+/* harmony default export */ var components_QdtBookmark = (QdtBookmarkObject);
 // CONCATENATED MODULE: ./src/QdtComponents.jsx
 
 
@@ -55885,6 +55920,7 @@ QdtCurrentSelections_QdtViz.defaultProps = {
 
 
 var QdtComponents_class, QdtComponents_temp;
+
 
 
 
@@ -55912,7 +55948,8 @@ var QdtComponents_components = {
   QdtButton: QdtButton_QdtButton,
   QdtPicasso: components_QdtPicasso,
   QdtSearch: components_QdtSearch,
-  QdtCurrentSelections: QdtCurrentSelections_QdtViz
+  QdtCurrentSelections: QdtCurrentSelections_QdtViz,
+  QdtBookmarks: components_QdtBookmark
 };
 var QdtComponents_QdtComponents = (QdtComponents_temp = QdtComponents_class = function QdtComponents() {
   var _this = this;
