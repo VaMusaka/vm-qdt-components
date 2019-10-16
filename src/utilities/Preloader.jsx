@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/index.scss';
+import Loader from 'react-loader-spinner';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 const Preloader = (props) => {
   const {
@@ -13,11 +15,7 @@ const Preloader = (props) => {
       <div className="qtd-preloader-bg" style={{ width, height, 'padding-top': paddingTop }} />
     );
   }
-  return (
-    <div className="qtd-preloader" style={{ width, height, 'padding-top': paddingTop }}>
-          SOME THING IS LOADING ...
-    </div>
-  );
+  return (<Loader type="Grid" color="#somecolor" height={80} width={80} />);
 };
 Preloader.propTypes = {
   width: PropTypes.string,

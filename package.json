@@ -34,6 +34,7 @@
     "qdt-lui": "^0.1.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-loader-spinner": "^3.1.4",
     "uglifyjs-webpack-plugin": "^2.1.2",
     "ws": "^7.0.0"
   },
