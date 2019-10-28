@@ -264,8 +264,7 @@ class QdtFilterComponent extends React.Component {
             <StateCountsBar qStateCounts={qStateCounts} />
             )}
           </LuiDropdown>
-          )
-        }
+          )}
         { expanded
         && (
         <LuiList style={{ width: '15rem' }}>
@@ -285,8 +284,7 @@ class QdtFilterComponent extends React.Component {
             viewportHeight={190}
           />
         </LuiList>
-        )
-        }
+        )}
         { expandedHorizontal
         && (
         <LuiTabset
@@ -299,8 +297,7 @@ class QdtFilterComponent extends React.Component {
             expandedHorizontalSense={expandedHorizontalSense}
           />
         </LuiTabset>
-        )
-        }
+        )}
       </div>
     );
   }

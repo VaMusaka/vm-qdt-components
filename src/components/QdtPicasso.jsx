@@ -194,8 +194,7 @@ class QdtPicassoComponent extends React.Component {
               <span className="lui-icon lui-icon--tick" />
             </button>
           </div>
-          )
-        }
+          )}
         <div style={{
           position: 'relative', width: outerWidth, height: outerHeight, overflow: 'auto', paddingRight: 10,
         }}
@@ -210,8 +209,7 @@ class QdtPicassoComponent extends React.Component {
             }}
           />
           { type === 'verticalBarchart' && miniMapVisible
-            && <QdtPicassoMiniMap {...this.props} updatePic={this.updatePic} setQTop={this.setQTop} />
-          }
+            && <QdtPicassoMiniMap {...this.props} updatePic={this.updatePic} setQTop={this.setQTop} />}
         </div>
       </div>
     );

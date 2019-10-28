@@ -7,14 +7,9 @@ const Preloader = (props) => {
   const {
     width, height,
   } = props;
-  const margin = 'auto';
-  const padding = ((height - 80) / 2);
   return (
-    <div style={{
-      height, width, margin, paddingTop: `${padding}px`,
-    }}
-    >
-      <Loader style={{ margin }} type="Grid" color="#cccccc" height={80} width={80} />
+    <div style={{ width: '100%', height: '100%' }}>
+      <Loader style={{ margin: 'auto' }} type="Grid" color="#cccccc" height={height} width={width} />
     </div>
   );
 };
@@ -25,8 +20,8 @@ Preloader.propTypes = {
   // type: PropTypes.string,
 };
 Preloader.defaultProps = {
-  width: '50%',
-  height: '50%',
+  width: 20,
+  height: 20,
   // paddingTop: 0,
   // type: 'balls',
 };
