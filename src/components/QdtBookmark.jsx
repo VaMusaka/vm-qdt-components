@@ -1,19 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const QdtBookmark = ({ qDocPromise }) => {
-  // const bookmarkList = qLayout.qBookmarkList;
-  qDocPromise((doc) => {
-    console.log(doc.getBookmarks());
-  })
-  return (
-    <div style={{ marginTop: '50px' }}>
-      <h1>HELLO FROM BOOKMARKS</h1>
-    </div>
-  );
-};
+export default class QdtBookmark extends Component {
+  static propTypes = { qAppPromise: PropTypes.object.isRequired };
 
-QdtBookmark.propTypes = {
-  qDocPromise: PropTypes.object.isRequired,
-};
-export default QdtBookmark;
+  constructor(props) {
+    super(props);
+    this.state = {
+      bookmarks: null,
+      error: null,
+    };
+  }
+
+  componentWillMount() {
+    this.BookmarkList = this.getList();
+  }
+
+  async getList() {
+    try {
+      const { qAppPromise } = this.props;
+      const qApp = await qAppPromise;
+      const list = await qApp.getList('BookmarkList');
+      return list;
+    } catch (error) {
+      this.setState({ error });
+      return undefined;
+    }
+  }
+
+
+  render() {
+    const { error, bookmarks } = this.state;
+    console.log(this.BookmarkList);
+    console.log(error, bookmarks);
+    return (
+      <div />
+    );
+  }
+}

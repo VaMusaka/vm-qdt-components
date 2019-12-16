@@ -34,8 +34,10 @@ export default class QdtButton extends React.Component {
     @autobind
     urlFix(url) {
       const tempUrl = url.split('/');
+      console.log(tempUrl);
       const sbstrIndex = url.indexOf('tempcontent');
       const myUrl = `${tempUrl[0]}//${tempUrl[2]}/${url.substring(sbstrIndex, url.length)}`;
+      console.log(myUrl);
       return myUrl;
     }
 
@@ -57,7 +59,8 @@ export default class QdtButton extends React.Component {
           if (qViz) {
             const myOptions = (options) || { format: 'CSV_T', state: 'P' };
             const url = await qViz.exportData(myOptions);
-            const myUrl = this.urlFix(url);
+            // const myUrl = this.urlFix(url);
+            const myUrl = url;
             window.open(myUrl, '_blank');
           }
           break;

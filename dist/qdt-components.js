@@ -18431,8 +18431,10 @@ function (_React$Component) {
     // Sept 2018 BUG. Adds the current www folder in the path
     value: function urlFix(url) {
       var tempUrl = url.split('/');
+      console.log(tempUrl);
       var sbstrIndex = url.indexOf('tempcontent');
       var myUrl = "".concat(tempUrl[0], "//").concat(tempUrl[2], "/").concat(url.substring(sbstrIndex, url.length));
+      console.log(myUrl);
       return myUrl;
     }
   }, {
@@ -18529,7 +18531,8 @@ function (_React$Component) {
 
               case 35:
                 url = _context.sent;
-                myUrl = this.urlFix(url);
+                // const myUrl = this.urlFix(url);
+                myUrl = url;
                 window.open(myUrl, '_blank');
 
               case 38:
@@ -54563,8 +54566,8 @@ var picasso_q_esm = __webpack_require__(19);
           _iteratorError = err;
         } finally {
           try {
-            if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-              _iterator["return"]();
+            if (!_iteratorNormalCompletion && _iterator.return != null) {
+              _iterator.return();
             }
           } finally {
             if (_didIteratorError) {
@@ -54591,7 +54594,7 @@ var picasso_q_esm = __webpack_require__(19);
 
       var res = _this.h('div', {
         attrs: {
-          "class": 'domLabel'
+          class: 'domLabel'
         },
         style: style
       }, row.data.label);
@@ -54646,7 +54649,7 @@ var picasso_q_esm = __webpack_require__(19);
 
       var res = _this.h('div', {
         attrs: {
-          "class": 'domPointImage'
+          class: 'domPointImage'
         },
         style: style
       }, row.data.label);
