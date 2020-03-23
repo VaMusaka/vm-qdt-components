@@ -18431,10 +18431,8 @@ function (_React$Component) {
     // Sept 2018 BUG. Adds the current www folder in the path
     value: function urlFix(url) {
       var tempUrl = url.split('/');
-      console.log(tempUrl);
       var sbstrIndex = url.indexOf('tempcontent');
       var myUrl = "".concat(tempUrl[0], "//").concat(tempUrl[2], "/").concat(url.substring(sbstrIndex, url.length));
-      console.log(myUrl);
       return myUrl;
     }
   }, {

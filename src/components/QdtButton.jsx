@@ -22,7 +22,7 @@ export default class QdtButton extends React.Component {
       title: PropTypes.string.isRequired,
       block: PropTypes.string,
       options: PropTypes.object,
-    }
+    };
 
     static defaultProps = {
       block: false,
@@ -34,10 +34,8 @@ export default class QdtButton extends React.Component {
     @autobind
     urlFix(url) {
       const tempUrl = url.split('/');
-      console.log(tempUrl);
       const sbstrIndex = url.indexOf('tempcontent');
       const myUrl = `${tempUrl[0]}//${tempUrl[2]}/${url.substring(sbstrIndex, url.length)}`;
-      console.log(myUrl);
       return myUrl;
     }
 
